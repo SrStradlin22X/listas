@@ -39,8 +39,7 @@ public class listas {
 
 		System.out.print("Enter the employee id that will have salary increase: ");
 		int id = sc.nextInt();
-
-		Integer pos = searchId(list, id);
+		Integer pos = emp.searchId(list, id);
 
 		if (pos == null) {
 			System.out.println("This id does exist!");
@@ -57,15 +56,6 @@ public class listas {
 			System.out.println(em);
 		}
 		sc.close();
-	}
-
-	public static Integer searchId(List<employeeData> list, int id) {
-		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i).getId() == id) {
-				return i;
-			}
-		}
-		return null;
 	}
 
 }
