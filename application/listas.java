@@ -25,6 +25,17 @@ public class listas {
 			System.out.println("Employee #" + i + ":");
 			System.out.print("Id: ");
 			int id = sc.nextInt();
+
+			Integer idTest = emp.testId(list, id);
+
+			while (idTest != null) {
+				System.out.println();
+				System.out.println("This ID already exists");
+				System.out.print("Enter another ID: ");
+				id = sc.nextInt();
+				idTest = emp.testId(list, id);
+			}
+
 			System.out.print("Name: ");
 			sc.nextLine();
 			String name = sc.nextLine();
@@ -37,7 +48,7 @@ public class listas {
 			list.add(emp);
 		}
 
-		System.out.print("Enter the employee id that will have salary increase: ");
+		System.out.print("Enter the employee ID that will have salary increase: ");
 		int id = sc.nextInt();
 		Integer pos = emp.searchId(list, id);
 

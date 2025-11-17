@@ -46,6 +46,15 @@ public class employeeData {
 		return null;
 	}
 
+	public Integer testId(List<employeeData> list, int id) {
+		for (int i = 0; i < list.size(); i++) {
+			if (list.get(i).getId() == id) {
+				return i;
+			}
+		}
+		return null;
+	}
+
 	@Override
 	public String toString() {
 		return id + ", " + name + ", R$" + String.format("%.2f", salary);
